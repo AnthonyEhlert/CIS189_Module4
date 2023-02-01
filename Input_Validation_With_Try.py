@@ -31,8 +31,8 @@ last_name = last_name.capitalize()
 # try/except block used for input validation
 try:
     user_age = int(input("Please enter your age as a whole number: "))
-    if (user_age < 0):
-        raise ValueError("age cannot be less than 0")
+    if (user_age < 0 or user_age > 150):
+        raise ValueError("age cannot be less than 0 or greater than 150")
 except:
     print("You did not enter a valid age. Age recorded as 0")
     user_age = 0
@@ -105,8 +105,8 @@ print(output_string)
 # Test 5, jim bob 65 -1 100 50 = "Bob, Jim age:  65 average grade: 50.00"
 # Test 6, jim bob -65 100 100.0 50 = "Bob, Jim age:  0 average grade: 50.00"
 # Test 7, jim bob 65 100 50 75.5 = "Bob, Jim age:  65 average grade: 50.00"
-# Test 8, jim bob 65 100 50 105 = "Bob, Jim age:  65 average grade: 50.00"
-# Test 9, jim bob 65 90.0 90.0 90.0 = "Bob, Jim age:  65 average grade: 0.00"
+# Test 8, jim bob 151 100 50 105 = "Bob, Jim age:  0 average grade: 50.00"
+# Test 9, jim bob 150 90.0 90.0 90.0 = "Bob, Jim age:  150 average grade: 0.00"
 # Test 10, jim bob xii 101 101 101 = "Bob, Jim age:  0 average grade: 0.00"
 # Test 11, jim bob 65 -1 -1 -1 = "Bob, Jim age:  65 average grade: 0.00"
 # Test 12, jim bob 65 100 100 100 = "Bob, Jim age:  65 average grade: 100.00"
