@@ -7,3 +7,5 @@ The purpose of this file is to list and declare constants to be used
 """
 # Constant variable representing total number of scores
 NUM_OF_SCORES = 3
+
+HOURS_IN_WEEK = 168
